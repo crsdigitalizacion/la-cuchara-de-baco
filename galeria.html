@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Galería | La Cuchara de Baco, restaurante en Logroño</title>
+  <meta name="description" content="Fotos del local y de los platos de La Cuchara de Baco, restaurante en la Avenida de Portugal, 5, Logroño.">
+  <meta name="theme-color" content="#26272b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/league-gothic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/alegreya.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    /* El navegador puede saltarse la transición entre páginas, sobre todo la primera
+       vez que carga una: entonces la página entra con un fundido. Va aquí porque
+       el aviso llega antes que el JavaScript del final de la página. */
+    addEventListener('pagereveal', function (evento) {
+      var transicion = evento.viewTransition;
+      var fundir = function () { document.documentElement.classList.add('fundido'); };
+      if (!transicion) { fundir(); return; }
+      transicion.ready.catch(fundir);
+      transicion.finished.catch(function () {});
+    });
+  </script>
+</head>
+<body class="pagina-galeria">
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <a class="marca" href="index.html" aria-label="La Cuchara de Baco, ir al inicio">La Cuchara de Baco</a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menus.html">Menús</a></li>
+        <li><a href="galeria.html" aria-current="page">Galería</a></li>
+        <li><a href="encuentranos.html">Encuéntranos</a></li>
+      </ul>
+      <a class="nav__reservar" href="encuentranos.html#reservar" data-reservar>Reservar</a>
+    </nav>
+  </header>
+
+  <main id="contenido" class="menus-pagina">
+    <h1 class="menus-pagina__titulo">Galería</h1>
+    <p class="menus-pagina__intro">Una vuelta por la casa, antes de sentarte a la mesa.</p>
+    <nav class="menus-pagina__saltos" aria-label="Ir a una sección" data-galeria-saltos></nav>
+    <div data-galeria></div>
+  </main>
+
+  <footer class="pie">
+    <p class="pie__marca">La Cuchara de Baco</p>
+    <div class="pie__contacto">
+      <p><span data-calle>Av. Portugal, 5</span>, <span data-cp>26001</span> <span data-ciudad>Logroño</span></p>
+      <p><a href="tel:+34698965692" data-tel data-tel-texto>698 965 692</a></p>
+    </div>
+    <nav aria-label="Pie de página">
+      <ul>
+        <li><a href="menus.html">Menús</a></li>
+        <li><a href="galeria.html" aria-current="page">Galería</a></li>
+        <li><a href="encuentranos.html">Encuéntranos</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Información legal">
+      <ul>
+        <li><a href="aviso-legal.html" data-aviso-legal>Aviso legal</a></li>
+        <li><a href="privacidad.html" data-privacidad>Política de privacidad</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <nav class="barra" aria-label="Accesos rápidos">
+    <a href="menus.html">Menús</a>
+    <a href="galeria.html" aria-current="page">Galería</a>
+    <a href="encuentranos.html">Encuéntranos</a>
+    <a class="barra__reservar" href="encuentranos.html#reservar" data-reservar>Reservar</a>
+  </nav>
+
+  <dialog class="visor" data-visor aria-label="Foto ampliada">
+    <div class="visor__marco">
+      <div class="visor__barra">
+        <p class="visor__cuenta" data-visor-cuenta></p>
+        <form method="dialog"><button class="visor__boton">Cerrar</button></form>
+      </div>
+      <figure class="visor__foto">
+        <img data-visor-img alt="">
+        <figcaption data-visor-pie></figcaption>
+      </figure>
+      <div class="visor__pasos">
+        <button class="visor__boton" type="button" data-visor-paso="-1">Anterior</button>
+        <button class="visor__boton" type="button" data-visor-paso="1">Siguiente</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aviso legal | La Cuchara de Baco</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    /* El navegador puede saltarse la transición entre páginas, sobre todo la primera
+       vez que carga una: entonces la página entra con un fundido. Va aquí porque
+       el aviso llega antes que el JavaScript del final de la página. */
+    addEventListener('pagereveal', function (evento) {
+      var transicion = evento.viewTransition;
+      var fundir = function () { document.documentElement.classList.add('fundido'); };
+      if (!transicion) { fundir(); return; }
+      transicion.ready.catch(fundir);
+      transicion.finished.catch(function () {});
+    });
+  </script>
+</head>
+<body class="legal">
+  <main>
+    <p><a href="index.html">Volver a La Cuchara de Baco</a></p>
+    <h1>Aviso legal</h1>
+    <p class="hueco">[Aviso legal — actualizar con el cliente]</p>
+    <p>Aquí irá el aviso legal con la razón social, el NIF, el domicilio y el correo de contacto del titular.</p>
+  </main>
+</body>
+</html>

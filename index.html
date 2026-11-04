@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>La Cuchara de Baco | Restaurante en Logroño, Av. Portugal 5</title>
+  <meta name="description" content="Restaurante en el corazón de Logroño: cocina tradicional con un toque de vanguardia, menú ejecutivo y menú del día o de fin de semana. Reservas en el 698 965 692.">
+  <meta name="theme-color" content="#1b1c1f">
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="La Cuchara de Baco">
+  <meta property="og:title" content="La Cuchara de Baco | Restaurante en Logroño">
+  <meta property="og:description" content="Cocina tradicional con un toque de vanguardia en la Avenida de Portugal, 5. Menú ejecutivo y menú del día o de fin de semana.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/league-gothic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/alegreya.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    /* El navegador puede saltarse la transición entre páginas, sobre todo la primera
+       vez que carga una: entonces la página entra con un fundido. Va aquí porque
+       el aviso llega antes que el JavaScript del final de la página. */
+    addEventListener('pagereveal', function (evento) {
+      var transicion = evento.viewTransition;
+      var fundir = function () { document.documentElement.classList.add('fundido'); };
+      if (!transicion) { fundir(); return; }
+      transicion.ready.catch(fundir);
+      transicion.finished.catch(function () {});
+    });
+  </script>
+  <script>
+    /* Entrada: solo la primera vez en cada sesión y sin pedir reducir el movimiento. */
+    try {
+      if (!sessionStorage.getItem('cuchara-entrada') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('con-entrada');
+        sessionStorage.setItem('cuchara-entrada', '1');
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body class="inicio">
+  <div class="entrada" aria-hidden="true" data-entrada>
+    <span class="entrada__telon entrada__telon--izquierda"></span>
+    <span class="entrada__telon entrada__telon--derecha"></span>
+    <p class="entrada__nombre">La Cuchara de Baco</p>
+  </div>
+  <div class="fondo" aria-hidden="true" data-fondo>
+    <picture class="fondo__foto">
+      <img src="assets/img/fondo-1.webp" alt="" width="1400" height="1050" fetchpriority="high">
+    </picture>
+  </div>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <a class="marca" href="#inicio" aria-label="La Cuchara de Baco, ir al inicio">La Cuchara de Baco</a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="menus.html">Menús</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="encuentranos.html">Encuéntranos</a></li>
+      </ul>
+      <a class="nav__reservar" href="encuentranos.html#reservar" data-reservar>Reservar</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="portada" id="inicio">
+      <div class="portada__texto">
+        <h1 class="titulo">
+          <span class="titulo__la">La</span>
+          <span class="titulo__linea">Cuchara</span>
+          <span class="titulo__linea">de Baco</span>
+          <span class="visual-oculto">, restaurante en Logroño</span>
+        </h1>
+        <p class="firma" data-firma>by Javi Sierra</p>
+        <div class="portada__pie">
+          <p class="frase">Te guardamos sitio y cuchara.</p>
+          <p class="portada__sub">Cocina tradicional con un toque de vanguardia, en el corazón de Logroño.</p>
+          <div class="portada__acciones">
+            <a class="boton boton--relleno" href="menus.html">Ver menús</a>
+            <a class="boton boton--linea-clara" href="tel:+34698965692" data-tel data-llamar>Llamar para reservar</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="casa" aria-labelledby="casa-titulo">
+      <div class="casa__texto">
+        <h2 id="casa-titulo">Lo de siempre, con otra mirada</h2>
+        <p class="casa__entrada">Una casa firmada por Javi Sierra, con cocina tradicional, un toque de vanguardia y platos muy cuidados.</p>
+        <p>Suelo de madera, pared de azulejo, cocina a la vista y una carta de vinos para acompañar lo que llega a la mesa. Puedes venir a por cualquiera de nuestros <a href="menus.html">dos menús</a>.</p>
+        <p class="casa__distincion" data-distincion hidden></p>
+      </div>
+    </section>
+
+    <section class="historia" aria-labelledby="historia-titulo">
+      <img class="historia__foto" src="assets/img/local-comedor-1200.webp" alt="Comedor con la cocina a la vista tras una cristalera de marcos verde agua" width="970" height="635" loading="lazy" decoding="async">
+      <div class="historia__texto">
+        <h2 id="historia-titulo">De los fogones a la televisión</h2>
+        <p class="historia__entrada">Javi Sierra nació en Amurrio (Álava) y creció en una familia de restaurantes, con su madre en la cocina.</p>
+        <p>Se dio a conocer con El Capricho de Baco, en Laguardia, y más tarde trajo su cocina a Logroño. Muchos le conocen por la pantalla: es uno de los rostros de la cocina en ETB.</p>
+        <ul class="historia__programas" aria-label="Programas de televisión presentados por Javi Sierra en ETB">
+          <li><strong>Juego de cartas</strong> <span>Cinco temporadas en ETB2</span></li>
+          <li><strong>El club del tupper</strong> <span>Tres temporadas de verano</span></li>
+          <li><strong>Trío de ases</strong> <span>Concurso de cocina en ETB2</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="destacados" aria-labelledby="destacados-titulo">
+      <h2 id="destacados-titulo">De nuestra carta</h2>
+      <div class="destacados__lista" data-destacados></div>
+      <a class="boton boton--linea-clara" href="menus.html#carta">Ver la carta</a>
+    </section>
+
+    <section class="opiniones" aria-labelledby="opiniones-titulo">
+      <h2 id="opiniones-titulo">Lo que dicen de nosotros</h2>
+      <p class="opiniones__nota" data-valoracion hidden></p>
+      <div class="opiniones__lista" data-opiniones></div>
+      <div class="opiniones__acciones">
+        <a class="boton boton--relleno" href="tel:+34698965692" data-tel data-llamar>Llamar para reservar</a>
+        <a class="boton boton--linea-clara" href="encuentranos.html">Cómo llegar</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p class="pie__marca">La Cuchara de Baco</p>
+    <div class="pie__contacto">
+      <p><span data-calle>Av. Portugal, 5</span>, <span data-cp>26001</span> <span data-ciudad>Logroño</span></p>
+      <p><a href="tel:+34698965692" data-tel data-tel-texto>698 965 692</a></p>
+    </div>
+    <nav aria-label="Pie de página">
+      <ul>
+        <li><a href="menus.html">Menús</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="encuentranos.html">Encuéntranos</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Información legal">
+      <ul>
+        <li><a href="aviso-legal.html" data-aviso-legal>Aviso legal</a></li>
+        <li><a href="privacidad.html" data-privacidad>Política de privacidad</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <nav class="barra" aria-label="Accesos rápidos">
+    <a href="menus.html">Menús</a>
+    <a href="galeria.html">Galería</a>
+    <a href="encuentranos.html">Encuéntranos</a>
+    <a class="barra__reservar" href="encuentranos.html#reservar" data-reservar>Reservar</a>
+  </nav>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

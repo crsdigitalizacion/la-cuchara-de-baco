@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Encuéntranos | La Cuchara de Baco, Av. Portugal 5, Logroño</title>
+  <meta name="description" content="La Cuchara de Baco está en la Avenida de Portugal, 5, 26001 Logroño. Reservas en el 698 965 692.">
+  <meta name="theme-color" content="#26272b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/league-gothic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/alegreya.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    /* El navegador puede saltarse la transición entre páginas, sobre todo la primera
+       vez que carga una: entonces la página entra con un fundido. Va aquí porque
+       el aviso llega antes que el JavaScript del final de la página. */
+    addEventListener('pagereveal', function (evento) {
+      var transicion = evento.viewTransition;
+      var fundir = function () { document.documentElement.classList.add('fundido'); };
+      if (!transicion) { fundir(); return; }
+      transicion.ready.catch(fundir);
+      transicion.finished.catch(function () {});
+    });
+  </script>
+</head>
+<body class="pagina-sitio">
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <a class="marca" href="index.html" aria-label="La Cuchara de Baco, ir al inicio">La Cuchara de Baco</a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menus.html">Menús</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="encuentranos.html" aria-current="page">Encuéntranos</a></li>
+      </ul>
+      <a class="nav__reservar" href="encuentranos.html#reservar" data-reservar>Reservar</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="sitio" id="encuentranos" aria-labelledby="sitio-titulo">
+      <h1 id="sitio-titulo">Encuéntranos</h1>
+      <address class="sitio__datos">
+        <a class="sitio__direccion" href="#" data-mapa>
+          <span data-calle>Av. Portugal, 5</span>
+          <small><span data-cp>26001</span> <span data-ciudad>Logroño</span>, <span data-region>La Rioja</span></small>
+        </a>
+        <a class="sitio__telefono" href="tel:+34698965692" data-tel data-tel-texto>698 965 692</a>
+      </address>
+      <div class="sitio__lateral">
+        <img class="sitio__foto" data-fachada src="assets/img/local-fachada-1200.webp" alt="Fachada de La Cuchara de Baco, con rótulo dorado y marcos verde agua" width="857" height="666" loading="lazy" decoding="async">
+        <div class="sitio__horario" data-horario>
+          <h3>Horario</h3>
+          <p>Llámanos y te decimos a qué hora abrimos hoy.</p>
+        </div>
+        <div class="sitio__acciones">
+          <a class="boton boton--relleno" href="#" data-mapa>Abrir en Google Maps</a>
+          <a class="boton boton--linea" href="https://www.instagram.com/lacucharadebaco/" data-instagram rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reserva" id="reservar" aria-labelledby="reserva-titulo">
+      <div class="reserva__cabeza">
+        <h2 id="reserva-titulo">Reserva tu mesa</h2>
+        <p>Cuéntanos cuándo vienes y te guardamos sitio y cuchara.</p>
+      </div>
+      <form class="formulario" data-reserva>
+        <div class="campo">
+          <label for="r-nombre">Nombre</label>
+          <input id="r-nombre" name="nombre" type="text" autocomplete="name" required>
+        </div>
+        <div class="campo">
+          <label for="r-telefono">Teléfono</label>
+          <input id="r-telefono" name="telefono" type="tel" autocomplete="tel" required>
+        </div>
+        <div class="campo campo--ancho">
+          <label for="r-correo">Correo electrónico</label>
+          <input id="r-correo" name="correo" type="email" autocomplete="email">
+        </div>
+        <div class="campo">
+          <label for="r-fecha">Fecha</label>
+          <input id="r-fecha" name="fecha" type="date" required data-reserva-fecha>
+        </div>
+        <div class="campo">
+          <label for="r-hora">Hora</label>
+          <select id="r-hora" name="hora" required>
+            <option value="">Elige una hora</option>
+            <optgroup label="Comida">
+              <option>13:30</option>
+              <option>14:00</option>
+              <option>14:30</option>
+              <option>15:00</option>
+            </optgroup>
+            <optgroup label="Cena (viernes y sábado)">
+              <option>20:30</option>
+              <option>21:00</option>
+              <option>21:30</option>
+              <option>22:00</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="r-personas">Personas</label>
+          <select id="r-personas" name="personas" required>
+            <option value="">Cuántos sois</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>Más de 8</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="r-menu">Quiero</label>
+          <select id="r-menu" name="menu">
+            <option>Aún no lo sé</option>
+            <option>Menú del día / fin de semana</option>
+            <option>Menú ejecutivo</option>
+            <option>Comer de carta</option>
+          </select>
+        </div>
+        <div class="campo campo--ancho">
+          <label for="r-notas">Comentarios, alergias o intolerancias</label>
+          <textarea id="r-notas" name="notas" rows="3"></textarea>
+        </div>
+        <div class="campo campo--ancho campo--casilla">
+          <input id="r-privacidad" name="privacidad" type="checkbox" required>
+          <label for="r-privacidad">He leído la <a href="privacidad.html" data-privacidad>política de privacidad</a>.</label>
+        </div>
+        <button class="boton boton--relleno campo--ancho" type="submit">Solicitar reserva</button>
+        <p class="formulario__aviso campo--ancho" role="status" data-reserva-aviso hidden></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p class="pie__marca">La Cuchara de Baco</p>
+    <div class="pie__contacto">
+      <p><span data-calle>Av. Portugal, 5</span>, <span data-cp>26001</span> <span data-ciudad>Logroño</span></p>
+      <p><a href="tel:+34698965692" data-tel data-tel-texto>698 965 692</a></p>
+    </div>
+    <nav aria-label="Pie de página">
+      <ul>
+        <li><a href="menus.html">Menús</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="encuentranos.html" aria-current="page">Encuéntranos</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Información legal">
+      <ul>
+        <li><a href="aviso-legal.html" data-aviso-legal>Aviso legal</a></li>
+        <li><a href="privacidad.html" data-privacidad>Política de privacidad</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <nav class="barra" aria-label="Accesos rápidos">
+    <a href="menus.html">Menús</a>
+    <a href="galeria.html">Galería</a>
+    <a href="encuentranos.html" aria-current="page">Encuéntranos</a>
+    <a class="barra__reservar" href="encuentranos.html#reservar" data-reservar>Reservar</a>
+  </nav>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
