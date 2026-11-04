@@ -40,6 +40,10 @@ La galería va por secciones: «El local» y «Postres y vinos» tienen composic
 
 En `menus.html` cada menú es una hoja de carta impresa sobre la pared: cursos centrados, nombre del plato en negrita y detalle en cursiva.
 
+## Dónde está publicada
+
+GitHub Pages, desde la rama `main`: https://crsdigitalizacion.github.io/la-cuchara-de-baco/ . Es una dirección provisional, con `noindex` para que no salga en Google. Al pasar a su dominio, quita el `noindex` de las cuatro páginas principales.
+
 ## Antes de publicar
 
 Sigue `PENDIENTES.md`. Con el dominio definitivo, añade además `<link rel="canonical">`, `og:url`, `og:image` y un `sitemap.xml`, y rellena `dominio` en `config.js`.

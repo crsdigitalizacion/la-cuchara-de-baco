@@ -8,8 +8,8 @@ window.CUCHARA = {
   nombre: 'La Cuchara de Baco',
   firma: 'by Javi Sierra', // pone null si no debe aparecer
 
-  // Dominio definitivo, sin barra final: 'https://www.ejemplo.es'
-  dominio: null,
+  // Dirección de la web, sin barra final. Cambiarla al tener dominio propio.
+  dominio: 'https://crsdigitalizacion.github.io/la-cuchara-de-baco',
 
   telefono: {
     enlace: '+34698965692',
@@ -124,8 +124,7 @@ window.CUCHARA = {
       id: 'dia-fin-de-semana',
       nombre: 'Menú del día / fin de semana',
       descripcion: 'El que cambia con el calendario. Pregunta qué hay hoy en cocina.',
-      // EJEMPLO PARA LA PRESENTACIÓN: precio y mensaje inventados. Los platos son
-      // de la carta que publicó en Instagram el 15/11/2022. Ver PENDIENTES.md.
+      // Propuesta aprobada por el dueño (4/11/2026): precio, mensaje y platos.
       mensaje: 'Primero, segundo y postre a elegir.',
       precio: '24,90 €',
       nota: 'Pan, agua y vino de Rioja incluidos.',
@@ -166,8 +165,7 @@ window.CUCHARA = {
       id: 'ejecutivo',
       nombre: 'Menú ejecutivo',
       descripcion: 'Pensado para comer bien en plena jornada de trabajo.',
-      // EJEMPLO PARA LA PRESENTACIÓN: menú y precio inventados, con platos de la
-      // carta. No publicar sin sustituirlo. Ver PENDIENTES.md.
+      // Propuesta aprobada por el dueño (4/11/2026): platos, precio y condiciones.
       mensaje: 'Primero, segundo y postre a elegir.',
       precio: '32,00 €',
       nota: 'Pan, agua, vino de Rioja y café incluidos.',
